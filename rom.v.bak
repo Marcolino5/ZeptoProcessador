@@ -1,0 +1,6 @@
+module rom(
+	input Adds[15:0];
+	output wire Inst[15:0];
+);
+//escrever programa aqui em linguagem de máquina
+endmodule

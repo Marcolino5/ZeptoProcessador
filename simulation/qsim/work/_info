@@ -1,0 +1,157 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Pichau\Desktop\UNB\LCL\Projetos\ProjetoFinal\simulation\qsim
+vcomparador
+Z1 I`HZiiJmR^OS`O``ITOiOF3
+Z2 VJh;SJE>a8fE:zdcB:Ng140
+Z3 dC:\Users\Pichau\Desktop\UNB\LCL\Projetos\ProjetoFinal\simulation\qsim
+Z4 w1660608878
+Z5 8ProjetoFinal.vo
+Z6 FProjetoFinal.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+Z9 !s100 Rc2SNL:Q`6C8TNMW]eAJD1
+Z10 !s108 1660608879.543000
+Z11 !s107 ProjetoFinal.vo|
+Z12 !s90 -work|work|ProjetoFinal.vo|
+!i10b 1
+!s85 0
+!s101 -O0
+vcomparador_vlg_check_tst
+Z13 INI<PJM@?bZWU>DCYm6nRH0
+Z14 VeETNDBnhiIWnAUbJ7LFl73
+R3
+Z15 w1660608876
+Z16 8ProjetoFinal.vt
+Z17 FProjetoFinal.vt
+L0 59
+R7
+r1
+31
+Z18 !s108 1660608879.654000
+Z19 !s107 ProjetoFinal.vt|
+Z20 !s90 -work|work|ProjetoFinal.vt|
+R8
+Z21 !s100 XZ]`>2jVTe:kePBCPLe7G1
+!i10b 1
+!s85 0
+!s101 -O0
+vcomparador_vlg_sample_tst
+Z22 IPj1aZTMPAjZ]VVj]3I69n2
+Z23 Vh;]D2DVDBmzT6z=oRQG3C0
+R3
+R15
+R16
+R17
+L0 29
+R7
+r1
+31
+R18
+R19
+R20
+R8
+Z24 !s100 g]^9m`Ceo]M8[n_FZ^znO0
+!i10b 1
+!s85 0
+!s101 -O0
+vcomparador_vlg_vec_tst
+Z25 I`^kn?]gV4L_Cm<HeSj7`i0
+Z26 V6G]SYVk@]hJW^O^D_bgjW2
+R3
+R15
+R16
+R17
+Z27 L0 207
+R7
+r1
+31
+R18
+R19
+R20
+R8
+Z28 !s100 `A4L99OMLfSOjiMbKobb;3
+!i10b 1
+!s85 0
+!s101 -O0
+vteste
+Z29 ILzP?imKN0e=H]8m<F=oem3
+Z30 VhSA?OdR]eYHfD6d`zZj<J1
+R3
+Z31 w1661885095
+R5
+R6
+L0 31
+R7
+r1
+31
+R12
+R8
+!i10b 1
+Z32 !s100 Hjhan_6j:h]`hP[Hl4iEI1
+!s85 0
+Z33 !s108 1661885096.621000
+R11
+!s101 -O0
+vteste_vlg_check_tst
+!i10b 1
+Z34 !s100 8a<A7^8z_ON?I@icjVamW3
+Z35 IJS?l=?YDI:6MZ_IoUf6gC3
+Z36 VI`WezCUGS9hkAYffNMY]b3
+R3
+Z37 w1661885094
+R16
+R17
+L0 61
+R7
+r1
+!s85 0
+31
+Z38 !s108 1661885096.697000
+Z39 !s107 ProjetoFinal.vt|
+R20
+!s101 -O0
+R8
+vteste_vlg_sample_tst
+!i10b 1
+Z40 !s100 MdKn@?jEKYBiz;MYJ]C6P3
+Z41 I>mP8Mo?:ReamS`I04<<9i2
+Z42 VL8QMY;k:3X8hf6ZT1G1j:2
+R3
+R37
+R16
+R17
+L0 29
+R7
+r1
+!s85 0
+31
+R38
+R39
+R20
+!s101 -O0
+R8
+vteste_vlg_vec_tst
+!i10b 1
+!s100 hWWBQ3n>`kKm<TTY2RAeN0
+IFXfd?;D0ld3PFLNM8=A2a1
+Z43 VXPSX<fIO^iX[3gUL>4nQH1
+R3
+R37
+R16
+R17
+Z44 L0 217
+R7
+r1
+!s85 0
+31
+R38
+R39
+R20
+!s101 -O0
+R8

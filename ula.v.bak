@@ -1,0 +1,57 @@
+module ula(
+	input [2:0] Op
+	input [15:0] A
+	input [15:0] B
+	output wire [15:0] S
+);
+	wire CoutA[15:0]
+	wire CoutS[15:0]
+	always@(Op[2], Op[1], Op[0]) begin
+		if(Op == 3'b000) begin
+			{CoutA[0], S[0]} = A[0] + B[0] + 1'b0
+			{CoutA[1], S[1]} = A[1] + B[1] + CoutA[0]
+			{CoutA[2], S[2]} = A[2] + B[2] + CoutA[1]
+			{CoutA[3], S[3]} = A[3] + B[3] + CoutA[2]
+			{CoutA[4], S[4]} = A[4] + B[4] + CoutA[3]
+			{CoutA[5], S[5]} = A[5] + B[5] + CoutA[4]
+			{CoutA[6], S[6]} = A[6] + B[6] + CoutA[5]
+			{CoutA[7], S[7]} = A[7] + B[7] + CoutA[6]
+			{CoutA[8], S[8]} = A[8] + B[8] + CoutA[7]
+			{CoutA[9], S[9]} = A[9] + B[9] + CoutA[8]
+			{CoutA[10], S[10]} = A[10] + B[10] + CoutA[9]
+			{CoutA[11], S[11]} = A[11] + B[11] + CoutA[10]
+			{CoutA[12], S[12]} = A[12] + B[12] + CoutA[11]
+			{CoutA[13], S[13]} = A[13] + B[13] + CoutA[12]
+			{CoutA[14], S[14]} = A[14] + B[14] + CoutA[13]
+			{CoutA[15], S[15]} = A[15] + B[15] + CoutA[14]
+		end
+		if(Op == 3'b001) begin
+			{CoutA[0], S[0]} = A[0] + ~B[0] + 1'b1
+			{CoutA[1], S[1]} = A[1] + ~B[1] + CoutA[0]
+			{CoutA[2], S[2]} = A[2] + ~B[2] + CoutA[1]
+			{CoutA[3], S[3]} = A[3] + ~B[3] + CoutA[2]
+			{CoutA[4], S[4]} = A[4] + ~B[4] + CoutA[3]
+			{CoutA[5], S[5]} = A[5] + ~B[5] + CoutA[4]
+			{CoutA[6], S[6]} = A[6] + ~B[6] + CoutA[5]
+			{CoutA[7], S[7]} = A[7] + ~B[7] + CoutA[6]
+			{CoutA[8], S[8]} = A[8] + ~B[8] + CoutA[7]
+			{CoutA[9], S[9]} = A[9] + ~B[9] + CoutA[8]
+			{CoutA[10], S[10]} = A[10] + ~B[10] + CoutA[9]
+			{CoutA[11], S[11]} = A[11] + ~B[11] + CoutA[10]
+			{CoutA[12], S[12]} = A[12] + ~B[12] + CoutA[11]
+			{CoutA[13], S[13]} = A[13] + ~B[13] + CoutA[12]
+			{CoutA[14], S[14]} = A[14] + ~B[14] + CoutA[13]
+			{CoutA[15], S[15]} = A[15] + ~B[15] + CoutA[14]
+		end
+		if(Op == 3'b010) begin
+			S = A&B
+		end
+		if(Op == 3'b011) begin
+			S = A|B
+		end
+		if(Op == 3'b100) begin
+			S = A^B
+		end
+	
+	end
+endmodule

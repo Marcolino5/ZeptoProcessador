@@ -1,0 +1,10 @@
+module pc(
+	input E[15:0]
+	input clk
+	output wire S[15:0]
+);
+
+fdiv U(.clkout(clk))
+always @(posedge clk) begin
+
+endmodule

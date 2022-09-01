@@ -1,0 +1,7 @@
+module main(
+	input KEY[0]
+	input SW[0]
+	input KEY[3]
+	output wire [6:0] HEX0
+);
+

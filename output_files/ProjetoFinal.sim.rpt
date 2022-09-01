@@ -1,0 +1,339 @@
+Simulator report for ProjetoFinal
+Wed Aug 31 11:38:42 2022
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 89 nodes     ;
+; Simulation Coverage         ;       0.00 % ;
+; Total Number of Transitions ; 0            ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                                               ;
++--------------------------------------------------------------------------------------------+---------------------------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                                             ; Default Value ;
++--------------------------------------------------------------------------------------------+---------------------------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                                          ; Timing        ;
+; Start time                                                                                 ; 0 ns                                                                ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                                                 ;               ;
+; Vector input source                                                                        ; C:/Users/Pichau/Desktop/UNB/LCL/Projetos/ProjetoFinal/Waveform1.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                                  ; On            ;
+; Check outputs                                                                              ; Off                                                                 ; Off           ;
+; Report simulation coverage                                                                 ; On                                                                  ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                                  ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                                  ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                                  ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                                 ; Off           ;
+; Detect glitches                                                                            ; Off                                                                 ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                                 ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                                 ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                                 ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                                 ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                                  ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                                          ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                                 ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                                 ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                                ; Auto          ;
++--------------------------------------------------------------------------------------------+---------------------------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;       0.00 % ;
+; Total nodes checked                                 ; 89           ;
+; Total output ports checked                          ; 89           ;
+; Total output ports with complete 1/0-value coverage ; 0            ;
+; Total output ports with no 1/0-value coverage       ; 89           ;
+; Total output ports with no 1-value coverage         ; 89           ;
+; Total output ports with no 0-value coverage         ; 89           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++-------------------------------------------------+
+; Complete 1/0-Value Coverage                     ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------+
+; Missing 1-Value Coverage                                     ;
++---------------------+---------------------+------------------+
+; Node Name           ; Output Port Name    ; Output Port Type ;
++---------------------+---------------------+------------------+
+; |controle|Jump~0    ; |controle|Jump~0    ; out0             ;
+; |controle|Jump~1    ; |controle|Jump~1    ; out0             ;
+; |controle|Jump~2    ; |controle|Jump~2    ; out0             ;
+; |controle|Jump~3    ; |controle|Jump~3    ; out0             ;
+; |controle|Jump~4    ; |controle|Jump~4    ; out0             ;
+; |controle|WE~0      ; |controle|WE~0      ; out0             ;
+; |controle|WE~1      ; |controle|WE~1      ; out0             ;
+; |controle|WE~2      ; |controle|WE~2      ; out0             ;
+; |controle|WE~3      ; |controle|WE~3      ; out0             ;
+; |controle|WE~4      ; |controle|WE~4      ; out0             ;
+; |controle|WE~5      ; |controle|WE~5      ; out0             ;
+; |controle|Inst[0]   ; |controle|Inst[0]   ; out              ;
+; |controle|Inst[1]   ; |controle|Inst[1]   ; out              ;
+; |controle|Inst[2]   ; |controle|Inst[2]   ; out              ;
+; |controle|Inst[3]   ; |controle|Inst[3]   ; out              ;
+; |controle|Inst[4]   ; |controle|Inst[4]   ; out              ;
+; |controle|Inst[5]   ; |controle|Inst[5]   ; out              ;
+; |controle|Inst[6]   ; |controle|Inst[6]   ; out              ;
+; |controle|Inst[7]   ; |controle|Inst[7]   ; out              ;
+; |controle|Inst[8]   ; |controle|Inst[8]   ; out              ;
+; |controle|Inst[9]   ; |controle|Inst[9]   ; out              ;
+; |controle|Inst[10]  ; |controle|Inst[10]  ; out              ;
+; |controle|Inst[11]  ; |controle|Inst[11]  ; out              ;
+; |controle|Inst[12]  ; |controle|Inst[12]  ; out              ;
+; |controle|Inst[13]  ; |controle|Inst[13]  ; out              ;
+; |controle|Inst[14]  ; |controle|Inst[14]  ; out              ;
+; |controle|Inst[15]  ; |controle|Inst[15]  ; out              ;
+; |controle|Inst[16]  ; |controle|Inst[16]  ; out              ;
+; |controle|Inst[17]  ; |controle|Inst[17]  ; out              ;
+; |controle|Inst[18]  ; |controle|Inst[18]  ; out              ;
+; |controle|Inst[19]  ; |controle|Inst[19]  ; out              ;
+; |controle|Inst[20]  ; |controle|Inst[20]  ; out              ;
+; |controle|Inst[21]  ; |controle|Inst[21]  ; out              ;
+; |controle|Inst[22]  ; |controle|Inst[22]  ; out              ;
+; |controle|Inst[23]  ; |controle|Inst[23]  ; out              ;
+; |controle|Inst[24]  ; |controle|Inst[24]  ; out              ;
+; |controle|Inst[25]  ; |controle|Inst[25]  ; out              ;
+; |controle|Inst[26]  ; |controle|Inst[26]  ; out              ;
+; |controle|Inst[27]  ; |controle|Inst[27]  ; out              ;
+; |controle|Inst[28]  ; |controle|Inst[28]  ; out              ;
+; |controle|Inst[29]  ; |controle|Inst[29]  ; out              ;
+; |controle|Inst[30]  ; |controle|Inst[30]  ; out              ;
+; |controle|Inst[31]  ; |controle|Inst[31]  ; out              ;
+; |controle|Op[0]     ; |controle|Op[0]     ; pin_out          ;
+; |controle|Op[1]     ; |controle|Op[1]     ; pin_out          ;
+; |controle|Op[2]     ; |controle|Op[2]     ; pin_out          ;
+; |controle|Ra[0]     ; |controle|Ra[0]     ; pin_out          ;
+; |controle|Ra[1]     ; |controle|Ra[1]     ; pin_out          ;
+; |controle|Ra[2]     ; |controle|Ra[2]     ; pin_out          ;
+; |controle|Ra[3]     ; |controle|Ra[3]     ; pin_out          ;
+; |controle|Rb[0]     ; |controle|Rb[0]     ; pin_out          ;
+; |controle|Rb[1]     ; |controle|Rb[1]     ; pin_out          ;
+; |controle|Rb[2]     ; |controle|Rb[2]     ; pin_out          ;
+; |controle|Rb[3]     ; |controle|Rb[3]     ; pin_out          ;
+; |controle|Rd[0]     ; |controle|Rd[0]     ; pin_out          ;
+; |controle|Rd[1]     ; |controle|Rd[1]     ; pin_out          ;
+; |controle|Rd[2]     ; |controle|Rd[2]     ; pin_out          ;
+; |controle|Rd[3]     ; |controle|Rd[3]     ; pin_out          ;
+; |controle|Imm[0]    ; |controle|Imm[0]    ; pin_out          ;
+; |controle|Imm[1]    ; |controle|Imm[1]    ; pin_out          ;
+; |controle|Imm[2]    ; |controle|Imm[2]    ; pin_out          ;
+; |controle|Imm[3]    ; |controle|Imm[3]    ; pin_out          ;
+; |controle|Imm[4]    ; |controle|Imm[4]    ; pin_out          ;
+; |controle|Imm[5]    ; |controle|Imm[5]    ; pin_out          ;
+; |controle|Imm[6]    ; |controle|Imm[6]    ; pin_out          ;
+; |controle|Imm[7]    ; |controle|Imm[7]    ; pin_out          ;
+; |controle|Imm[8]    ; |controle|Imm[8]    ; pin_out          ;
+; |controle|Imm[9]    ; |controle|Imm[9]    ; pin_out          ;
+; |controle|Imm[10]   ; |controle|Imm[10]   ; pin_out          ;
+; |controle|Imm[11]   ; |controle|Imm[11]   ; pin_out          ;
+; |controle|Imm[12]   ; |controle|Imm[12]   ; pin_out          ;
+; |controle|Imm[13]   ; |controle|Imm[13]   ; pin_out          ;
+; |controle|Imm[14]   ; |controle|Imm[14]   ; pin_out          ;
+; |controle|Imm[15]   ; |controle|Imm[15]   ; pin_out          ;
+; |controle|WE        ; |controle|WE        ; pin_out          ;
+; |controle|Jump      ; |controle|Jump      ; pin_out          ;
+; |controle|CJump     ; |controle|CJump     ; pin_out          ;
+; |controle|jalr      ; |controle|jalr      ; pin_out          ;
+; |controle|Equal0~0  ; |controle|Equal0~0  ; out0             ;
+; |controle|Equal1~0  ; |controle|Equal1~0  ; out0             ;
+; |controle|Equal2~0  ; |controle|Equal2~0  ; out0             ;
+; |controle|Equal3~0  ; |controle|Equal3~0  ; out0             ;
+; |controle|Equal4~0  ; |controle|Equal4~0  ; out0             ;
+; |controle|Equal5~0  ; |controle|Equal5~0  ; out0             ;
+; |controle|Equal6~0  ; |controle|Equal6~0  ; out0             ;
+; |controle|Equal7~0  ; |controle|Equal7~0  ; out0             ;
+; |controle|Equal8~0  ; |controle|Equal8~0  ; out0             ;
+; |controle|Equal9~0  ; |controle|Equal9~0  ; out0             ;
+; |controle|Equal10~0 ; |controle|Equal10~0 ; out0             ;
++---------------------+---------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------+
+; Missing 0-Value Coverage                                     ;
++---------------------+---------------------+------------------+
+; Node Name           ; Output Port Name    ; Output Port Type ;
++---------------------+---------------------+------------------+
+; |controle|Jump~0    ; |controle|Jump~0    ; out0             ;
+; |controle|Jump~1    ; |controle|Jump~1    ; out0             ;
+; |controle|Jump~2    ; |controle|Jump~2    ; out0             ;
+; |controle|Jump~3    ; |controle|Jump~3    ; out0             ;
+; |controle|Jump~4    ; |controle|Jump~4    ; out0             ;
+; |controle|WE~0      ; |controle|WE~0      ; out0             ;
+; |controle|WE~1      ; |controle|WE~1      ; out0             ;
+; |controle|WE~2      ; |controle|WE~2      ; out0             ;
+; |controle|WE~3      ; |controle|WE~3      ; out0             ;
+; |controle|WE~4      ; |controle|WE~4      ; out0             ;
+; |controle|WE~5      ; |controle|WE~5      ; out0             ;
+; |controle|Inst[0]   ; |controle|Inst[0]   ; out              ;
+; |controle|Inst[1]   ; |controle|Inst[1]   ; out              ;
+; |controle|Inst[2]   ; |controle|Inst[2]   ; out              ;
+; |controle|Inst[3]   ; |controle|Inst[3]   ; out              ;
+; |controle|Inst[4]   ; |controle|Inst[4]   ; out              ;
+; |controle|Inst[5]   ; |controle|Inst[5]   ; out              ;
+; |controle|Inst[6]   ; |controle|Inst[6]   ; out              ;
+; |controle|Inst[7]   ; |controle|Inst[7]   ; out              ;
+; |controle|Inst[8]   ; |controle|Inst[8]   ; out              ;
+; |controle|Inst[9]   ; |controle|Inst[9]   ; out              ;
+; |controle|Inst[10]  ; |controle|Inst[10]  ; out              ;
+; |controle|Inst[11]  ; |controle|Inst[11]  ; out              ;
+; |controle|Inst[12]  ; |controle|Inst[12]  ; out              ;
+; |controle|Inst[13]  ; |controle|Inst[13]  ; out              ;
+; |controle|Inst[14]  ; |controle|Inst[14]  ; out              ;
+; |controle|Inst[15]  ; |controle|Inst[15]  ; out              ;
+; |controle|Inst[16]  ; |controle|Inst[16]  ; out              ;
+; |controle|Inst[17]  ; |controle|Inst[17]  ; out              ;
+; |controle|Inst[18]  ; |controle|Inst[18]  ; out              ;
+; |controle|Inst[19]  ; |controle|Inst[19]  ; out              ;
+; |controle|Inst[20]  ; |controle|Inst[20]  ; out              ;
+; |controle|Inst[21]  ; |controle|Inst[21]  ; out              ;
+; |controle|Inst[22]  ; |controle|Inst[22]  ; out              ;
+; |controle|Inst[23]  ; |controle|Inst[23]  ; out              ;
+; |controle|Inst[24]  ; |controle|Inst[24]  ; out              ;
+; |controle|Inst[25]  ; |controle|Inst[25]  ; out              ;
+; |controle|Inst[26]  ; |controle|Inst[26]  ; out              ;
+; |controle|Inst[27]  ; |controle|Inst[27]  ; out              ;
+; |controle|Inst[28]  ; |controle|Inst[28]  ; out              ;
+; |controle|Inst[29]  ; |controle|Inst[29]  ; out              ;
+; |controle|Inst[30]  ; |controle|Inst[30]  ; out              ;
+; |controle|Inst[31]  ; |controle|Inst[31]  ; out              ;
+; |controle|Op[0]     ; |controle|Op[0]     ; pin_out          ;
+; |controle|Op[1]     ; |controle|Op[1]     ; pin_out          ;
+; |controle|Op[2]     ; |controle|Op[2]     ; pin_out          ;
+; |controle|Ra[0]     ; |controle|Ra[0]     ; pin_out          ;
+; |controle|Ra[1]     ; |controle|Ra[1]     ; pin_out          ;
+; |controle|Ra[2]     ; |controle|Ra[2]     ; pin_out          ;
+; |controle|Ra[3]     ; |controle|Ra[3]     ; pin_out          ;
+; |controle|Rb[0]     ; |controle|Rb[0]     ; pin_out          ;
+; |controle|Rb[1]     ; |controle|Rb[1]     ; pin_out          ;
+; |controle|Rb[2]     ; |controle|Rb[2]     ; pin_out          ;
+; |controle|Rb[3]     ; |controle|Rb[3]     ; pin_out          ;
+; |controle|Rd[0]     ; |controle|Rd[0]     ; pin_out          ;
+; |controle|Rd[1]     ; |controle|Rd[1]     ; pin_out          ;
+; |controle|Rd[2]     ; |controle|Rd[2]     ; pin_out          ;
+; |controle|Rd[3]     ; |controle|Rd[3]     ; pin_out          ;
+; |controle|Imm[0]    ; |controle|Imm[0]    ; pin_out          ;
+; |controle|Imm[1]    ; |controle|Imm[1]    ; pin_out          ;
+; |controle|Imm[2]    ; |controle|Imm[2]    ; pin_out          ;
+; |controle|Imm[3]    ; |controle|Imm[3]    ; pin_out          ;
+; |controle|Imm[4]    ; |controle|Imm[4]    ; pin_out          ;
+; |controle|Imm[5]    ; |controle|Imm[5]    ; pin_out          ;
+; |controle|Imm[6]    ; |controle|Imm[6]    ; pin_out          ;
+; |controle|Imm[7]    ; |controle|Imm[7]    ; pin_out          ;
+; |controle|Imm[8]    ; |controle|Imm[8]    ; pin_out          ;
+; |controle|Imm[9]    ; |controle|Imm[9]    ; pin_out          ;
+; |controle|Imm[10]   ; |controle|Imm[10]   ; pin_out          ;
+; |controle|Imm[11]   ; |controle|Imm[11]   ; pin_out          ;
+; |controle|Imm[12]   ; |controle|Imm[12]   ; pin_out          ;
+; |controle|Imm[13]   ; |controle|Imm[13]   ; pin_out          ;
+; |controle|Imm[14]   ; |controle|Imm[14]   ; pin_out          ;
+; |controle|Imm[15]   ; |controle|Imm[15]   ; pin_out          ;
+; |controle|WE        ; |controle|WE        ; pin_out          ;
+; |controle|Jump      ; |controle|Jump      ; pin_out          ;
+; |controle|CJump     ; |controle|CJump     ; pin_out          ;
+; |controle|jalr      ; |controle|jalr      ; pin_out          ;
+; |controle|Equal0~0  ; |controle|Equal0~0  ; out0             ;
+; |controle|Equal1~0  ; |controle|Equal1~0  ; out0             ;
+; |controle|Equal2~0  ; |controle|Equal2~0  ; out0             ;
+; |controle|Equal3~0  ; |controle|Equal3~0  ; out0             ;
+; |controle|Equal4~0  ; |controle|Equal4~0  ; out0             ;
+; |controle|Equal5~0  ; |controle|Equal5~0  ; out0             ;
+; |controle|Equal6~0  ; |controle|Equal6~0  ; out0             ;
+; |controle|Equal7~0  ; |controle|Equal7~0  ; out0             ;
+; |controle|Equal8~0  ; |controle|Equal8~0  ; out0             ;
+; |controle|Equal9~0  ; |controle|Equal9~0  ; out0             ;
+; |controle|Equal10~0 ; |controle|Equal10~0 ; out0             ;
++---------------------+---------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Aug 31 11:38:41 2022
+Info: Command: quartus_sim --simulation_results_format=VWF ProjetoFinal -c ProjetoFinal
+Info (324025): Using vector source file "C:/Users/Pichau/Desktop/UNB/LCL/Projetos/ProjetoFinal/Waveform1.vwf"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is       0.00 %
+Info (328052): Number of transitions in simulation is 0
+Info (324045): Vector file ProjetoFinal.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4440 megabytes
+    Info: Processing ended: Wed Aug 31 11:38:42 2022
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

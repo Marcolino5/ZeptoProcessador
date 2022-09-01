@@ -1,0 +1,67 @@
+$comment
+	File created using the following command:
+		vcd file ProjetoFinal.msim.vcd -direction
+$end
+$date
+	Tue Aug 30 15:44:57 2022
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module teste_vlg_vec_tst $end
+$var reg 2 ! A [1:0] $end
+$var reg 2 " B [1:0] $end
+$var reg 1 # Cin $end
+$var wire 1 $ Cout [1] $end
+$var wire 1 % Cout [0] $end
+$var wire 1 & S [1] $end
+$var wire 1 ' S [0] $end
+$var wire 1 ( sampler $end
+$scope module i1 $end
+$var wire 1 ) gnd $end
+$var wire 1 * vcc $end
+$var wire 1 + unknown $end
+$var tri1 1 , devclrn $end
+$var tri1 1 - devpor $end
+$var tri1 1 . devoe $end
+$var wire 1 / Cin~combout $end
+$var wire 1 0 Add1~0_combout $end
+$var wire 1 1 Add3~0_combout $end
+$var wire 1 2 Add1~1_combout $end
+$var wire 1 3 Add3~1_combout $end
+$var wire 1 4 B~combout [1] $end
+$var wire 1 5 B~combout [0] $end
+$var wire 1 6 A~combout [1] $end
+$var wire 1 7 A~combout [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b11 !
+b0 "
+1#
+0%
+0$
+1'
+0&
+x(
+0)
+1*
+x+
+1,
+1-
+1.
+1/
+00
+01
+12
+03
+05
+04
+17
+z6
+$end

@@ -1,0 +1,21 @@
+module controle(
+	input [31:0] Inst,
+	output wire WE,
+	output wire [2:0] Op,
+	output wire [3:0] Ra,
+	output wire [3:0] Rb,
+	output wire [3:0] Rd,
+	output wire [15:0] Imm,
+	output wire Jump,
+	output wire CJump
+);
+wire [3:0] OpCode;
+assign Op[0] = (Inst % 2'b10);
+assign Op[1] = ((Inst % 3'b100) >> 1);
+assign Op[2] = ((Inst % 4'b1000) >> 2);
+assign Opcode[0] = Op[0];
+assign Opcode[1] = Op[1];
+assign Opcode[2] = Op[2];
+assign Opcode[3] = ((Inst % 5'b10000) >> 3);
+
+endmodule
