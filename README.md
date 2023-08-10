@@ -1,1 +1,0 @@
-ZeptoProcessador descrito em verilog, criado como projeto final para a disciplina "Laboratório de Circuitos Lógicos"
