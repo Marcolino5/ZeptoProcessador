@@ -1,6 +1,7 @@
 module main(
 	input [3:0] KEY, // KEY[0] = Reset, KEY[3] = Clock manual
-	input [2:0] SW, // SW[0] = Muda clock, SW[1] e SW[2] = Seleciona valor do display
+	input [3:0] SW, // SW[0] = Muda clock, SW[1] e SW[2] = Seleciona valor do display, SW[3] = Muda clock automático
+	input CLOCK_50,
 	output wire [6:0] HEX0,
 	output wire [6:0] HEX1,
 	output wire [6:0] HEX2,
@@ -8,17 +9,26 @@ module main(
 	output wire [6:0] HEX4,
 	output wire [6:0] HEX5,
 	output wire [6:0] HEX6,
-	output wire [6:0] HEX7
+	output wire [6:0] HEX7,
+	output wire [1:0] LEDR,
+	output [15:0] VerRA
 );
 wire clk;
 wire div;
 // Clock automático / manual
-fdiv U0(.clkout(div));
+fdiv U0(.clkin(CLOCK_50),.clkout(div));
 always @(*)
 begin
 	if (SW[0] == 1'b0)
 		begin
-		clk = div;
+			if (SW[3] == 1'b0)
+				begin
+				clk = CLOCK_50;
+				end
+			if (SW[3] == 1'b1)
+				begin
+				clk = div;
+				end
 		end
 	if (SW[0] == 1'b1)
 		begin
@@ -26,12 +36,13 @@ begin
 		end
 end
 
+assign LEDR[0] = clk;
 // PC e ROM
 wire [15:0] E; // Entrada de PC
 wire [15:0] Adds; // Endereço
 wire [31:0] Inst; // Instrução
 wire Reset;
-assign Reset = KEY[0];
+assign Reset = ~KEY[0];
 pc U1(.E(E),.clk(clk),.Saida(Adds),.Reset(Reset)); // Pega saida de PC (endereço), coloca Reset de PC em KEY[0], coloca clock
 rom U2(.Adds(Adds),.Inst(Inst)); // Pega instruçao da ROM a partir de endereço
 
@@ -55,15 +66,16 @@ controle U3(.Inst(Inst),.Op(Op),.Ra(Ra),.Rb(Rb),.Rd(Rd),.Imm(Imm),.WE(WE),.Jump(
 wire [15:0] D;
 wire [15:0] A;
 wire [15:0] B;
-registrador U4(.D(D),.Ra(Ra),.Rb(Rb),.Rd(Rd),.WE(WE),.Reset(Reset),.clk(clk),.A(A),.B(B));
+registrador U5(.D(D),.Ra(Ra),.Rb(Rb),.Rd(Rd),.WE(WE),.Reset(Reset),.clk(clk),.A(A),.B(B));
+assign VerRA = A;
 
 // ULA e comparador
 wire [15:0] P;
 wire [15:0] S;
 wire [3:0] SComp;
-comparador U5(.A(A),.B(B),.S(SComp)); // * Melhorar comparador p/ contar com números negativos
-ula U6(.Op(Op),.A(A),.B(B),.S(S)); // Realiza operaçao com Ra e Rb
-ula U7(.Op(Op),.A(S),.B(Imm),.S(P)); // Realiza operaçao com resultado e imediato
+comparador U6(.A(A),.B(B),.S(SComp));
+ula U7(.Op(Op),.A(A),.B(B),.S(S)); // Realiza operaçao com Ra e Rb
+ula U8(.Op(Op),.A(S),.B(Imm),.S(P)); // Realiza operaçao com resultado e imediato
 
 wire [15:0] Sadd; // Soma ao endereço de PC
 always @(*)
@@ -96,12 +108,21 @@ begin
 			end
 		else
 			begin
-			Sadd = Imm;
+			if (jalr == 1'b1)
+				begin
+				D = Adds + 1;
+				Sadd = A - Adds + Imm;
+				end
+			else
+				begin
+				D = Adds + 1;
+				Sadd = Imm;
+				end
 			end
 		end
 end
 
-ula U8(.Op(3'b000),.A(Adds),.B(Sadd),.S(E)); // Coloca novo endereço de PC
+ula U9(.Op(3'b000),.A(Adds),.B(Sadd),.S(E)); // Coloca novo endereço de PC
 // SW[2],SW[1]: 00 = PC, 01 = Instruçao, 11 = Ra, 10 = Rb
 	wire [6:0] PC0;
 	wire [6:0] PC1;
